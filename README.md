@@ -3,8 +3,6 @@
 Fork of `react-native-printer` and add implement for auto connect printer with usb
 A React Native Library to support USB/BLE/Net printer
 
-![Node.js Package](https://github.com/HeligPfleigh/bag-react-native-thermal-receipt-printer/workflows/Node.js%20Package/badge.svg)
-
 ## Installation
 
 ```
