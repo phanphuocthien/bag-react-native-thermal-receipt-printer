@@ -16,10 +16,10 @@ var RNBLEPrinter = NativeModules.RNBLEPrinter;
 var RNNetPrinter = NativeModules.RNNetPrinter;
 var textTo64Buffer = function (text, opts) {
     var defaultOptions = {
-        beep: false,
-        cut: false,
+        beep: false,        
         tailingLine: false,
         encoding: "UTF8",
+        cut: false,
     };
     var options = __assign(__assign({}, defaultOptions), opts);
     var buffer = EPToolkit.exchange_text(text, options);
@@ -27,10 +27,10 @@ var textTo64Buffer = function (text, opts) {
 };
 var billTo64Buffer = function (text, opts) {
     var defaultOptions = {
-        beep: true,
-        cut: true,
+        beep: true,        
         encoding: "UTF8",
         tailingLine: true,
+        cut: false,
     };
     var options = __assign(__assign({}, defaultOptions), opts);
     var buffer = EPToolkit.exchange_text(text, options);

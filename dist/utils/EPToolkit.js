@@ -24,7 +24,7 @@ var cd_end_bytes = Buffer.from([27, 33, 0, 28, 33, 0]);
 var d_start_bytes = Buffer.from([27, 33, 32, 28, 33, 4]);
 var d_end_bytes = Buffer.from([27, 33, 0, 28, 33, 0]);
 var cut_bytes = Buffer.from([27, 105]);
-var beep_bytes = Buffer.from([27, 66, 3, 2]);
+var beep_bytes = Buffer.from([27, 3, 2]);
 var line_bytes = Buffer.from([10, 10, 10, 10, 10]);
 var options_controller = {
     cut: cut_bytes,
@@ -52,10 +52,10 @@ var controller = {
     "</R>": r_end_bytes,
 };
 var default_options = {
-    beep: false,
-    cut: true,
+    beep: false,    
     tailingLine: true,
     encoding: "UTF8",
+    cut: false,
 };
 export function exchange_text(text, options) {
     var m_options = options || default_options;
